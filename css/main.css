@@ -1,0 +1,113 @@
+:root {
+    --primary-color: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+    --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+    --light-grayish-cyan-1: hsl(185, 41%, 84%);
+    --light-grayish-cyan-2: hsl(185, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+html {
+    height: 100vh;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    background-color: var(--light-grayish-cyan-1);
+    font-family: 'Space Mono', monospace;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    white-space: pre-line;
+}
+
+.header {
+    letter-spacing: 0.6rem;
+    font-weight: 700;
+    color: var(--very-dark-cyan);
+}
+
+.calcbox {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    border-radius: 0.9375rem;
+    padding: 1rem 2.0625rem;
+    background-color: var(--white);
+    min-width: 60%;
+    margin: 3.75rem 0;
+    min-height: 100%;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--very-dark-cyan);
+    border-radius: 0.9375rem;
+    margin: 4% 0;
+    padding: 5% 5% 7% 5%;
+}
+
+#resetbtn {
+    border: none;
+    border-radius: 0.375rem;
+    padding: 3% 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+#resetbtn > span {
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.textonly {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 4.0625rem;
+}
+
+.textonly > * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currency {
+    color: var(--primary-color);
+    font-size: 2.625rem;
+    font-weight: 700;
+}
+
+.text2 {
+    color: var(--dark-grayish-cyan-2);
+}
+
+.value-section {
+    font-size: 0.875rem;
+    color: var(--very-dark-cyan);
+}
