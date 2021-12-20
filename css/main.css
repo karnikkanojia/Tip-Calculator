@@ -16,6 +16,13 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 html {
     height: 100vh;
     font-size: 100%;
@@ -85,13 +92,13 @@ body {
     letter-spacing: 0.1rem;
 }
 
-.textonly {
+.textonly-right {
     color: var(--white);
     font-size: 1rem;
     margin-bottom: 4.0625rem;
 }
 
-.textonly > * {
+.textonly-right > * {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -108,6 +115,29 @@ body {
 }
 
 .value-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-size: 0.875rem;
     color: var(--very-dark-cyan);
+    margin: 10% 15% 10% 0;
+}
+
+#billval-input {
+    all: unset;
+    background-color: var(--light-grayish-cyan-2);
+}
+
+.input-grid { 
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 2px;
+}
+
+.input-grid > * {
+    border-radius: 2px;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    text-align: center;
 }

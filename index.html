@@ -19,23 +19,29 @@
     <div class="value-section">
       <span class="billval">
         Bill
-        <input type="number" name="billval">
+        <input type="number" id="billval-input" min="0">
       </span>
       
-
-      Select Tip %
-      5%
-      10%
-      15%
-      25%
-      50%
-      Custom
-
-      Number of People
+      <div class="tip-selection">
+        Select Tip %
+        <div class="input-grid">
+          <span>5%</span>
+          <span>10%</span>
+          <span>15%</span>
+          <span>25%</span>
+          <span>50%</span>
+          <span>Custom</span>
+        </div>
+      </div>
+      <span class="billval">
+        Number of People
+        <input type="number" id="billval-input" min="0">
+      </span>
+      
     </div>
   
   <div class="display">
-    <div class="textonly">
+    <div class="textonly-right">
       <section class="tipa">
         <p class="desctext">
           <span class="text1">Tip Amount</span>
