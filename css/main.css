@@ -45,10 +45,15 @@ body {
     white-space: pre-line;
 }
 
-.header {
-    letter-spacing: 0.6rem;
+.headers {
+    display: flex;
+    justify-content: space-between;
     font-weight: 700;
     color: var(--very-dark-cyan);
+}
+
+.invalid-text {
+    color: coral;
 }
 
 .calcbox {
@@ -144,7 +149,7 @@ body {
     padding: 0.4375rem;
 }
 
-.input-grid > input {
+.custom-tip-val {
     font: inherit;
     border: none;
     background-color: var(--light-grayish-cyan-2);
@@ -153,8 +158,8 @@ body {
     text-align: right;
 }
 
-.input-grid::placeholder {
-    color: var(--primary-color);
+.custom-tip-val::placeholder {
+    text-align: center;
 }
 
 .form-animate {
@@ -190,4 +195,14 @@ body {
     height: 150%;
     width: 100%;
     padding: 0.625rem;
+}
+
+.valid-val {
+    border: solid 2px;
+    border-color:darkseagreen;
+}
+
+.invalid-val {
+    border: solid 2px;
+    border-color: coral;
 }
