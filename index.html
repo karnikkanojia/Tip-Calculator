@@ -17,10 +17,12 @@
   <img src="images/logo.svg" alt="">
   <div class="calcbox">
     <div class="value-section">
-      <span class="billval form-animate">
+      <span class="billval">
         <header>Bill</header>
-        <label for="billval"></label>
-        <input type="number" class="val-input" min="0">
+        <span class="form-animate">
+          <label for="bill-value"><img src="images/icon-dollar.svg" alt="dollar-icon"></label>
+          <input type="number" id="bill-value" class="val-input" min="0">
+        </span>
       </span>
       <div class="tip-selection">
         Select Tip %
@@ -33,9 +35,12 @@
           <span>Custom</span>
         </div>
       </div>
-      <span class="peopleval form-animate">
+      <span class="peopleval">
         <header>Number of People</header>
-        <input type="number" class="val-input" min="0">
+        <span class="form-animate">
+          <label for="total-value"><img src="images/icon-person.svg" alt="person-icon"></label>
+          <input type="number" id="total-value" class="val-input" min="0">
+        </span>
       </span>
       
     </div>

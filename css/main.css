@@ -125,37 +125,56 @@ body {
     margin: 10% 15% 10% 0;
 }
 
-.val-input {
-    background-color: var(--light-grayish-cyan-2);
-    border: none;
-    border-radius: 3px;
-    font: inherit;
-    color: var(--very-dark-cyan);
-    outline: none;
-    padding: 0.5rem;
-    height: 100%;
-}
-
 .input-grid { 
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 50% 50%;
-    grid-gap: 2px;
+    grid-gap: 1rem;
 }
 
 .input-grid > * {
-    border-radius: 2px;
+    border-radius: 0.4375rem;
     background-color: var(--very-dark-cyan);
     color: var(--white);
     text-align: center;
+    width: 100%;
+    min-height: 50%;
+    font-size: 1.125rem;
+    align-self: center;
+    padding: 0.4375rem;
 }
 
 .form-animate {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    align-content: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .form-animate > header {
     margin-bottom: 0.75rem;
+}
+
+.form-animate > label {
+    position: absolute;
+    top: calc(50% + 0.1157rem);
+    transform: translateY(-50%);
+    left: 0.625rem;
+    width: fit-content;
+    z-index: 1;
+}
+
+.val-input {
+    background-color: var(--light-grayish-cyan-2);
+    border: none;
+    border-radius: 0.1875rem;
+    font: inherit;
+    color: var(--very-dark-cyan);
+    text-align: right;
+    outline: none;
+    height: 150%;
+    width: 100%;
+    padding: 0.625rem;
 }
