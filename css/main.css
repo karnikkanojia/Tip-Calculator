@@ -112,20 +112,28 @@ body {
 
 .text2 {
     color: var(--dark-grayish-cyan-2);
+    font-size: 0.75rem;
 }
 
 .value-section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 0.875rem;
-    color: var(--very-dark-cyan);
+    font-size: 0.85rem;
+    color: var(--dark-grayish-cyan-1);
+    font-weight: 700;
     margin: 10% 15% 10% 0;
 }
 
-#billval-input {
-    all: unset;
+.val-input {
     background-color: var(--light-grayish-cyan-2);
+    border: none;
+    border-radius: 3px;
+    font: inherit;
+    color: var(--very-dark-cyan);
+    outline: none;
+    padding: 0.5rem;
+    height: 100%;
 }
 
 .input-grid { 
@@ -140,4 +148,14 @@ body {
     background-color: var(--very-dark-cyan);
     color: var(--white);
     text-align: center;
+}
+
+.form-animate {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.form-animate > header {
+    margin-bottom: 0.75rem;
 }
