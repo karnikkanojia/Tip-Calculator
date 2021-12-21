@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -20,11 +20,11 @@
       <span class="billval">
         <span class="headers">
           <header>Bill</header>
-          <header class="invalid-text">Can't be zero</header>
+          <header class="invalid-text" id="billval-invalid">Can't be zero</header>
         </span>
         <span class="form-animate">
           <label for="bill-value"><img src="images/icon-dollar.svg" alt="dollar-icon"></label>
-          <input type="number" id="bill-value" class="val-input" min="0">
+          <input type="number"  id="bill-value" class="val-input" min="0">
         </span>
       </span>
       <div class="tip-selection">
@@ -42,7 +42,7 @@
       <span class="peopleval">
         <span class="headers">
           <header>Number of People</header>
-          <header class="invalid-text">Can't be zero</header>
+          <header class="invalid-text" id="numpeople-invalid">Can't be zero</header>
         </span>
         <span class="form-animate">
           <label for="total-value"><img src="images/icon-person.svg" alt="person-icon"></label>
@@ -59,14 +59,14 @@
           <span class="text1">Tip Amount</span>
         <span class="text2">/ person</span>
         </p>
-        <number class="currency">$4.27</number>
+        <number class="currency">$0.00</number>
       </section>
       <section class="totala">
         <p class="desctext">
           <span class="text1">Total</span>
           <span class="text2">/ person</span>
         </p>
-        <number class="currency">$32.79</number>
+        <number class="currency">$0.00</number>
       </section>
     </div>
     <button type="reset" id="resetbtn">
@@ -80,5 +80,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Karnik Kanojia 😎🚀</a>.
   </div>
+  <script src="js/app.js"></script>
 </body>
 </html>
