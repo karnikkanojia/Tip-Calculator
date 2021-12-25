@@ -24,7 +24,7 @@
         </span>
         <span class="form-animate">
           <label for="bill-value"><img src="images/icon-dollar.svg" alt="dollar-icon"></label>
-          <input type="number"  id="bill-value" class="val-input" min="0">
+          <input type="number" pattern="[0-9]*" id="bill-value" class="val-input" min="0" onkeypress="preventNonNumericalInput(event)">
         </span>
       </span>
       <div class="tip-selection">
@@ -36,7 +36,7 @@
           <span class="tip-given">15%</span>
           <span class="tip-given">25%</span>
           <span class="tip-given">50%</span>
-          <input type="number" placeholder="Custom" class="custom-tip-val">
+          <input type="number" pattern="[0-9]" placeholder="Custom" class="custom-tip-val" onkeypress="preventNonNumericalInput(event)">
         </div>
       </div>
       <span class="peopleval">
@@ -46,7 +46,7 @@
         </span>
         <span class="form-animate">
           <label for="total-person"><img src="images/icon-person.svg" alt="person-icon"></label>
-          <input type="number" id="total-person" class="val-input" min="0">
+          <input type="number" id="total-person" class="val-input" min="0" onkeypress="preventNonNumericalInput(event)">
         </span>
       </span>
       

@@ -17,11 +17,16 @@ a, a:visited, a:active {
 }
 
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+input::-webkit-inner-spin-button,
+input::-moz-number-spin-up,
+input::-moz-number-spin-down {
+    -webkit-appearance: none;
   margin: 0;
 }
 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 
 html {
     height: 100vh;
@@ -217,4 +222,10 @@ body {
 .invalid-val {
     border: solid 2px;
     border-color: coral;
+}
+
+@media screen and (max-width: 375px) {
+    .calcbox {
+        grid-template-rows: 50% 50%;
+    }
 }
