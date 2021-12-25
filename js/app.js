@@ -16,6 +16,16 @@ function tipslection(){
     }
 }
 
+function tipdeselct(){
+    for(let i=0; i<tipvaluesgiven.length-1; i++){
+        if(tipvaluesgiven[i].classList.contains('tip-selected')){
+            tipvaluesgiven[i].classList.remove('tip-selected');
+        }
+    }
+    this.classList.add('tip-selected');
+    console.log(this.classList)
+}
+
 function preventNonNumericalInput(e) {
     e = e || window.event;
     var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
@@ -43,7 +53,8 @@ function calculate() {
 
 for(var i=0; i<tipvaluesgiven.length-1; i++){
     tipvaluesgiven[i].addEventListener('mouseenter', tipslection, false); 
-    tipvaluesgiven[i].addEventListener('click', settip, false); 
+    tipvaluesgiven[i].addEventListener('click', settip, false);
+    tipvaluesgiven[i].addEventListener('click', tipdeselct, false);
     tipvaluesgiven[i].addEventListener('click', calculate);
 }
 

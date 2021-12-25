@@ -212,8 +212,40 @@ body {
     border-color: coral;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 640px) {
     .calcbox {
-        grid-template-rows: 50% 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 0 2.0625rem;
+        margin: 0;
+        border-radius: 1rem ;
+    }
+
+    body > img:nth-child(1) {
+        margin: 1rem;
+    }
+
+    .display {
+        margin: 0% 0;
+        height: fit-content;
+    }
+
+    .value-section {
+        margin: 10% 0;
+    }
+    
+    .textonly-right {
+        margin-bottom: 0;
+    }
+
+    .tip-input-grid { 
+        grid-template-columns: 47.5% 47.5%;
+        grid-template-rows: 30% 30% 30%;
+    }
+    
+    .attribution {
+        display: none;
     }
 }
