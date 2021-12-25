@@ -1,9 +1,14 @@
 const billvalue = document.querySelector("#bill-value");
-const totalvalue = document.querySelector("#total-value");
+const totalperson = document.querySelector("#total-person");
 const tipvalue = document.querySelector(".custom-tip-val");
-const tipvaluesgiven = document.querySelector(".input-grid").children;
-const resetbtn = document.querySelector("#resetbtn")
-var tipselected = false;
+const numpeople = document.querySelector("#total-person");
+const tipperp = document.querySelector("#tip-amount-perp");
+const amountperp = document.querySelector("#total-amount-perp");
+const tipvaluesgiven = document.querySelector(".tip-input-grid").children;
+const resetbtn = document.querySelector("#resetbtn");
+var tip_select = 0;
+
+const keyupevent = new KeyboardEvent('keyup')
 
 function tipslection(){
     if(!this.classList.contains('tip-selected')){
@@ -11,11 +16,36 @@ function tipslection(){
     }
 }
 
+function calculate() {
+    let billval_final = Number(billvalue.value) || 0;
+    let numpep_final = Number(numpeople.value) || 0;
+    let tipval = tip_select || 0;
+    if(!(numpep_final && tipval)) return;
+    let tipamountperp = (billval_final*tipval)/(100*numpep_final);
+    tipperp.innerText = '$' + Math.round((tipamountperp + Number.EPSILON) * 100) / 100
+    let totalamountperp = (billval_final/numpep_final) + tipamountperp;
+    amountperp.innerText = '$' + Math.round((totalamountperp + Number.EPSILON) * 100) / 100
+}
+
 for(var i=0; i<tipvaluesgiven.length-1; i++){
     tipvaluesgiven[i].addEventListener('mouseenter', tipslection, false); 
-    tipvaluesgiven[i].addEventListener('click', tipslection, false); 
-
+    tipvaluesgiven[i].addEventListener('click', settip, false); 
+    tipvaluesgiven[i].addEventListener('click', calculate);
 }
+
+function settip() {
+    tipvalue.value = '';
+    tipvalue.dispatchEvent(keyupevent);
+    tip_select = Number(this.innerText.slice(0, -1));
+}
+
+resetbtn.addEventListener('click', () => {
+    billvalue.value = '';
+    numpeople.value = '';
+    amountperp.innerText = tipperp.innerText ="$0.00"; 
+    numpeople.dispatchEvent(keyupevent);
+    billvalue.dispatchEvent(keyupevent);
+})
 
 function hidetext(element, display){
     if(element === null) return;
@@ -58,8 +88,14 @@ function evalinput(){
     }
 }
 
-totalvalue.addEventListener('keyup', evalinput, false);
+totalperson.addEventListener('keyup', evalinput, false);
+totalperson.addEventListener('keyup', calculate, false);
 billvalue.addEventListener('keyup', evalinput, false);
+billvalue.addEventListener('keyup', calculate, false);
 tipvalue.addEventListener('keyup', evalinput, false);
+tipvalue.addEventListener('keyup', () => {
+    tip_select = Number(tipvalue.value);
+    calculate();
+})
 
 

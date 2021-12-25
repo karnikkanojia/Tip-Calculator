@@ -30,7 +30,7 @@
       <div class="tip-selection">
         Select Tip %
         
-        <div class="input-grid">
+        <div class="tip-input-grid">
           <span class="tip-given">5%</span>
           <span class="tip-given">10%</span>
           <span class="tip-given">15%</span>
@@ -45,8 +45,8 @@
           <header class="invalid-text" id="numpeople-invalid">Can't be zero</header>
         </span>
         <span class="form-animate">
-          <label for="total-value"><img src="images/icon-person.svg" alt="person-icon"></label>
-          <input type="number" id="total-value" class="val-input" min="0">
+          <label for="total-person"><img src="images/icon-person.svg" alt="person-icon"></label>
+          <input type="number" id="total-person" class="val-input" min="0">
         </span>
       </span>
       
@@ -59,14 +59,14 @@
           <span class="text1">Tip Amount</span>
         <span class="text2">/ person</span>
         </p>
-        <number class="currency">$0.00</number>
+        <number class="currency" id="tip-amount-perp">$0.00</number>
       </section>
       <section class="totala">
         <p class="desctext">
           <span class="text1">Total</span>
           <span class="text2">/ person</span>
         </p>
-        <number class="currency">$0.00</number>
+        <number class="currency" id="total-amount-perp">$0.00</number>
       </section>
     </div>
     <button type="reset" id="resetbtn">
