@@ -20,8 +20,14 @@ function preventNonNumericalInput(e) {
     e = e || window.event;
     var charCode = (typeof e.which == "undefined") ? e.keyCode : e.which;
     var charStr = String.fromCharCode(charCode);
-    if (!charStr.match(/^[0-9]+$/))
-      e.preventDefault();
+    if(!charStr.match(/[0-9]|\./)){
+        e.preventDefault();
+    }
+    var bfstr = e.target.value;
+    var tmpstr = bfstr+charStr;
+    if([...tmpstr].filter(ch => ch==='.').length > 1){
+        e.preventDefault();
+    }
   }
 
 function calculate() {

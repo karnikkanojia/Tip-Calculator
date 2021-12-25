@@ -16,18 +16,6 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button,
-input::-moz-number-spin-up,
-input::-moz-number-spin-down {
-    -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 html {
     height: 100vh;
     font-size: 100%;
