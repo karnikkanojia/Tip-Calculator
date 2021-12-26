@@ -55,5 +55,5 @@ Users should be able to:
 ## Author
 
 - Website - [Karnik Kanojia](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/KanojiaKarnik)
+- Frontend Mentor - [@karnikkanojia](https://www.frontendmentor.io/profile/karnikkanojia)
+- Twitter - [@KanojiaKarnik](https://www.twitter.com/KanojiaKarnik)
