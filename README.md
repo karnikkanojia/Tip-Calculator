@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/karnikkanojia/Tip-Calculator)
-- Live Site URL: [Add live site URL here](https://karnikkanojia.github.io/Tip-Calculator/)
+- Solution URL: [Github Link](https://github.com/karnikkanojia/Tip-Calculator)
+- Live Site URL: [Site URL](https://karnikkanojia.github.io/Tip-Calculator/)
 
 ## My process
 
