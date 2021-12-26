@@ -54,4 +54,4 @@ Users should be able to:
 
 - Website - [Karnik Kanojia](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/Karnikkanojia)
+- Twitter - [@yourusername](https://www.twitter.com/KanojiaKarnik)
